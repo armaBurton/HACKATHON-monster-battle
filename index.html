@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./character-picker.css">
+    <link rel="stylesheet" href="./you-win.css">
+    <link rel="stylesheet" href="./you-lose.css">
+    <link rel="stylesheet" href="./rules.css">
+</head>
+<body>
+    <header>
+    </header>
+    <main id="background">
+        <!-- computer generated monster team -->
+        <div id="monster-pane">
+            <div class="monster" id="monster-01">
+                <div class="monster-name">
+                </div>
+                <img id="monster-01-image" src="./assets/image/pit-fiend.jpg" alt="" class="monster-image">
+                <div class="stats">
+                    <div id="stats">
+                        <div class="hp direction">
+                            HP: <span class="point-style" id="monster-01-hp">100</span>
+                        </div>
+                        <!-- <div class="mp direction">
+                            MP: <span class="point-style" id="monster-01-mp">100</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="monster" id="monster-02">
+                <div class="monster-name">
+                </div>
+                <img id="monster-02-image" src="./assets/image/xenomorph.jpg" alt="" class="monster-image">
+                <div class="stats">
+                    <div id="stats">
+                        <div class="hp direction">
+                            HP: <span class="point-style" id="monster-02-hp">100</span>
+                        </div>
+                        <!-- <div class="mp direction">
+                            MP: <span class="point-style" id="monster-02-mp">100</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="monster" id="monster-03">
+                <div class="monster-name">
+                </div>
+                <img id="monster-03-image" src="./assets/image/lava-spewer.jpg" alt="" class="monster-image">
+                <div class="stats">
+                    <div id="stats">
+                        <div class="hp direction">
+                            HP: <span class="point-style" id="monster-03-hp">100</span>
+                        </div>
+                        <!-- <div class="mp direction">
+                            MP: <span class="point-style" id="monster-03-mp">100</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="action-panel">
+            <div class="title rotate">
+                combat panel
+            </div>
+            <div class="combat-text" id="combat-text">
+                <!-- <p class="player-attack">:>> <span">Your <span class="bold" id="p-char">Archer's</span> piercing attack does <span class="bold" id="p-damage">9</span> damage to enemy <span class="bold" id="p-enemy">Pit Fiend</span>.</span></p>
+                <p class="monster-attack">:>> <span>Enemy <span class="bold" id="e-char">Xenomorph's</span> bite attack hits your <span class="bold" id="e-enemy">Archer</span> for <span class="bold" id="e-damage">12</span> damage.</span></p> -->
+            </div>
+        </div>
+        <!-- player monster team -->
+        <div id="player-pane">         
+            <div class="player-monster" id="player-monster">
+                <div id="player-name">
+                    Archer
+                </div>
+                <div class="name-divider">
+                    <div id="player-portrait">
+                        <img id="player-image" src="" alt="" class="monster-image">
+                    </div>
+                    <div class="stats">
+                        <div id="player-stats">
+                            <div class="player-stat-style hp direction">
+                                HP: <span class="player-point-style" id="player-hp"></span>
+                            </div>
+                            <!-- <div class="player-stat-style mp direction">
+                                MP: <span class="player-point-style" id="player-mp">100</span>
+                            </div> -->
+                        </div>
+                        <div class="player-actions">
+                            <input class="attack-button-style" type="button" value="Attack" id="attack">
+                            <input class="attack-button-style" type="button" value="Heal" id="heal">
+                        </div>
+                    </div>
+                    <!-- <div class="player-actions">
+                        <input type="button" value="Attack" id="attack">
+                        <input type="button" value="Retreat" id="retreat">
+                    </div>  -->
+                </div>
+            </div>
+        </div>
+
+        <section class="character-chooser visibility" id="chooser-id">
+            <div class="chooser">
+                <div class="character-panel">
+                    <div class="char" id="selected-01">
+                        <div class="name" id="chooser-name-01">Archer</div>
+                        <div class="picture" id="chooser-pic-01">
+                        </div>
+                    </div>
+                    <div class="char" id="selected-02">
+                        <div class="name" id="chooser-name-02">Barbarian</div>
+                        <div class="picture" id="chooser-pic-02"></div>
+                    </div>
+                    <div class="char" id="selected-03">
+                        <div class="name" id="chooser-name-03">Warlock</div>
+                        <div class="picture" id="chooser-pic-03"></div>
+                    </div>
+                    <div class="char" id="selected-04">
+                        <div class="name" id="chooser-name-04">Cleric</div>
+                        <div class="picture" id="chooser-pic-04"></div>
+                    </div>
+                    <div class="char" id="selected-05">
+                        <div class="name" id="chooser-name-05">Valkyrie</div>
+                        <div class="picture" id="chooser-pic-05"></div>
+                    </div>
+                </div>
+                <input type="button" id="pick-char-button" value="Choose Your Hero">
+            </div>
+        </section>
+        <section class="you-win visibility" id="you-win">
+            <div class="you-win-wrapper">
+                <div class="text-portion fade-in">
+                    YOU WIN!
+                    <audio >
+                        <source src="./assets/backgrounds/you-win-street-fighter.mp3" id="win-sound" type="audio/mpeg">
+                    </audio>
+                </div>
+                <input type="button" class="play-again" value="Play Again?">
+            </div>
+        </section>
+        <section class="you-lose visibility" id="you-lose">
+            <div class="you-lose-wrapper">
+                <div class="text-portion fade-in">
+                    YOU LOSE!
+                    <audio>
+                        <source src="./assets/backgrounds/you-lose.mp3" id="lose-sound" type="audio/mpeg">
+                    </audio>
+                </div>
+                <input type="button" class="play-again" value="Play Again?">
+            </div>
+        </section>
+        <section class="rules" id="rules">
+            <div class="rules-wrapper">
+                <div class="rules-text-portion">
+                    <p class="rules-text"><span class="rotate-span"><span class="rotate-number">1</span></span>Select a Hero.</p>
+                    <p class="rules-text"><span class="rotate-span"><span class="rotate-number">2</span></span>Choose an Enemy.</p>
+                    <p class="rules-text"><span class="rotate-span"><span class="rotate-number">3</span></span>Make an Attack or Heal Action.</p>
+                    <p class="rules-text"><span class="rotate-span"><span class="rotate-number">4</span></span>Defeat Your Enemies...Or Die Trying.</p>
+                </div>
+                <div id="close-x">X</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

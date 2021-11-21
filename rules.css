@@ -1,0 +1,97 @@
+.rules{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(197, 0%, 16%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-wrapper{
+    width: 950px;
+    height: 500px;
+    background-color: hsla(197, 0%, 9%, 1);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 5px double goldenrod;
+    display: flex;
+    padding: 20px 100px;
+    align-items: center;
+    position: relative;
+}
+
+.rules-text-portion{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Skranji';
+    color: goldenrod;
+    font-size: 2rem;
+
+}
+
+.rules-text{
+    font-family: 'Skranji';
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.rotate-span{
+    height: 35px;
+    width: 35px;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.rotate-number{
+    color: black;
+    font-family: 'Skranji';
+    transform: rotate(-45deg);
+    /* font-size: 2rem; */
+}
+
+.fade-in{
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    to {
+        
+    }
+}
+
+#close-x{
+    color: black;
+    font-family: 'Skranji';
+    font-size: 3rem;
+    position: relative;
+    bottom: 200px;
+    left: 80px;
+    cursor: pointer;
+}
+
+#close-x:hover{
+    text-shadow: 0 0 5px #DAA52088;
+}

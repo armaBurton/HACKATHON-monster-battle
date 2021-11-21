@@ -1,0 +1,102 @@
+.character-chooser{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(197, 0%, 16%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visibility{
+    visibility: hidden;
+}
+
+.chooser{
+    width: 950px;
+    height: 500px;
+    background-color: hsla(197, 0%, 9%, 1);
+    border-radius: 10px;
+    border: 5px double goldenrod;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.character-panel{
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+
+.char{
+    background-color: black;
+    width: auto;
+    height: 225px;
+    padding: 10px;
+    position: static;
+    margin-top: 100px;
+    border-radius: 5px;
+    border: 1px solid goldenrod;
+    margin-right: 10px;
+}
+
+.char:last-child{
+    margin-right: 0;
+}
+
+#pick-char-button{
+    height:50px;
+    width: 250px;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.name{
+    color: goldenrod;
+    font-size: 1.5rem;
+    font-family: 'Skranji';
+    margin-top: 10px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.picture{
+    height: 150px;
+    width: 150px;
+    background-color: beige;
+}
+
+#chooser-pic-01{
+    background-image: url(./assets/image/arch.png);
+    object-fit: cover;
+    background-size: 150px 150px;
+}
+
+#chooser-pic-02{
+    background-image: url(./assets/image/barbarian.png);
+    object-fit: cover;
+    background-size: 150px 150px;
+}
+
+#chooser-pic-03{
+    background-image: url(./assets/image/warlock.png);
+    object-fit: cover;
+    background-size: 150px 150px;
+}
+
+#chooser-pic-04{
+    background-image: url(./assets/image/cleric.png);
+    object-fit: cover;
+    background-size: 150px 150px;
+}
+
+#chooser-pic-05{
+    background-image: url(./assets/image/valkyrie.png);
+    object-fit: cover;
+    background-size: 150px 150px;
+}
